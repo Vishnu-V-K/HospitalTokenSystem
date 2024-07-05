@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Background with Buttons</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>/* Reset default margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set image as background */
+.bg-image {
+    /* Ensure the image covers the entire viewport */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place the image behind other content */
+    
+    /* Set the background image */
+    background-image: url('medico.jpg');
+    
+    /* Scale the background image to cover the entire container */
+    background-size: cover;
+    
+    /* Center the background image */
+    background-position: center;
+}
+
+/* Style button container */
+.button-container {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+/* Style buttons */
+.transparent-btn {
+	margin: 0 15px;
+    padding: 10px 20px;
+    font-size: 30px;
+    color: #1B4D3E; /* Text color */
+    background-color: transparent; /* Transparent background */
+    border: 2px solid#1B4D3E; /* White border */
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.transparent-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white background on hover */
+}
+.lines {
+	position: absolute;
+    top: 40%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    color: #1B4D3E;
+}</style>
+
+</head>
+<body>
+	<form action="/login">
+    <!-- Image container with buttons -->
+    <div class="bg-image">
+		<div class="lines">
+		<p>If there 1% chance, We have 99% faith</p>
+		</div>
+        <!-- Button container -->
+        <div class="button-container">
+			<a type="button" class="transparent-btn" href="/login">LOGIN</a>
+			<a type="button" class="transparent-btn" href="/register">REGISTER</a>
+        </div>
+    </div>
+   </form>
+</body>
+</html>
